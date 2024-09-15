@@ -5,6 +5,6 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
   imports: [TypeOrmModule.forFeature([ClubEntity])],
-  providers: [ClubService]
+  providers: [ClubService],
 })
 export class ClubModule {}

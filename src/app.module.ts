@@ -6,6 +6,7 @@ import { ClubModule } from './club/club.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { SocioEntity } from './socio/socio.entity';
 import { ClubEntity } from './club/club.entity';
+import { ClubSocioModule } from './club-socio/club-socio.module';
 
 @Module({
   imports: [SocioModule, ClubModule,
@@ -16,11 +17,15 @@ import { ClubEntity } from './club/club.entity';
       username: 'postgres',
       password: 'postgres',
       database: 'clubes',
-      entities: [SocioEntity, ClubEntity],
+      entities: [
+        SocioEntity,
+         ClubEntity,
+      ],
       dropSchema: true,
       synchronize: true,
       keepConnectionAlive: true
     }),
+    ClubSocioModule,
   ],
   controllers: [AppController],
   providers: [AppService],

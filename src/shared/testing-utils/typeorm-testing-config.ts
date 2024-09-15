@@ -10,10 +10,16 @@ export const TypeOrmTestingConfig = () => [
    type: 'sqlite',
    database: ':memory:',
    dropSchema: true,
-   entities: [SocioEntity, ClubEntity],
+   entities: [
+    ClubEntity, 
+    SocioEntity,
+  ],
    synchronize: true,
    keepConnectionAlive: true
  }),
- TypeOrmModule.forFeature([SocioEntity, ClubEntity]),
+ TypeOrmModule.forFeature([
+  ClubEntity, 
+  SocioEntity,
+]),
 ];
 /* archivo src/shared/testing-utils/typeorm-testing-config.ts*/

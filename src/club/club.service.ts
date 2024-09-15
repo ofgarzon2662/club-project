@@ -13,7 +13,7 @@ export class ClubService {
 
     // Obtener todos los clubes
     async findAll(): Promise<ClubEntity[]> {
-        return await this.clubRepository.find({ relations: ["socios"] });
+        return await this.clubRepository.find({ relations: ['socios'] });
     }
 
     // Obtener un club por id
