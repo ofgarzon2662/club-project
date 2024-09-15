@@ -9,6 +9,7 @@ import { SocioEntity } from './socio.entity';
 describe('SocioService', () => {
   let service: SocioService;
   let repository: Repository<SocioEntity>;
+  let socios: SocioEntity[];
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
@@ -23,4 +24,14 @@ describe('SocioService', () => {
   it('should be defined', () => {
     expect(service).toBeDefined();
   });
+
+  
+
+
+
+
+
+
+
+
 });

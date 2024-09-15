@@ -15,7 +15,9 @@ export class SocioEntity {
     @Column()
     fechaNacimiento: Date;
 
-    @ManyToMany(() => ClubEntity, club => club.socios)
-    clubs: ClubEntity[];
-    
-}
+    @ManyToMany(
+        () => ClubEntity,
+        (club: ClubEntity) => club.socios,
+      )
+      clubs: ClubEntity[];
+    }

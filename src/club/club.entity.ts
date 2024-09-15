@@ -10,7 +10,7 @@ export class ClubEntity {
     nombre: string;
     
     @Column()
-    fechaFundacion: string;
+    fechaFundacion: Date;
     
     @Column()
     imagen: string;
@@ -22,7 +22,6 @@ export class ClubEntity {
         () => SocioEntity,
         (socio: SocioEntity) => socio.clubs
     )
-
     @JoinTable()
     socios: SocioEntity[];
 }
