@@ -18,7 +18,4 @@ export class SocioDto {
   @Validate(IsPastDateConstraint)
   fechaNacimiento: Date;
 
-  @IsString()
-  @IsNotEmpty()
-  ciudad: string;
 }

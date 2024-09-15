@@ -19,7 +19,7 @@ import { ClubSocioModule } from './club-socio/club-socio.module';
       database: 'clubes',
       entities: [
         SocioEntity,
-         ClubEntity,
+        ClubEntity
       ],
       dropSchema: true,
       synchronize: true,

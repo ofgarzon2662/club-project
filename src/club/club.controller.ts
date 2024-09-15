@@ -10,12 +10,11 @@ import {
     UseInterceptors,
   } from '@nestjs/common';
 
-  import { BusinessErrorsInterceptor } from '../shared/interceptors/business-errors.interceptors';
-  import { ClubService } from './club.service';
-  import { ClubEntity } from './club.entity';
-  import { ClubDto } from './club.dto';
-  import { plainToInstance } from 'class-transformer';
-import exp from 'constants';
+import { BusinessErrorsInterceptor } from '../shared/interceptors/business-errors.interceptors';
+import { ClubService } from './club.service';
+import { ClubEntity } from './club.entity';
+import { ClubDto } from './club.dto';
+import { plainToInstance } from 'class-transformer';
 
 @Controller('clubs')
 @UseInterceptors(BusinessErrorsInterceptor)
