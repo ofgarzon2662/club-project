@@ -29,7 +29,7 @@ describe('SocioService', () => {
     socios = [];
     for (let i: number = 0; i < 5; i++) {
       const socio: SocioEntity = await repository.save({
-        nombre: faker.name.firstName(),
+        nombre: faker.person.firstName(),
         email: faker.internet.email(),
         fechaNacimiento: faker.date.between({
           from: new Date('1950-01-01'),
@@ -68,7 +68,7 @@ describe('SocioService', () => {
 
   it('create debería crear un socio', async () => {
     const newSocio: Partial<SocioEntity> = {
-      nombre: faker.name.firstName(),
+      nombre: faker.person.firstName(),
       email: faker.internet.email(),
       fechaNacimiento: faker.date.between({
         from: new Date('1950-01-01'),
@@ -86,7 +86,7 @@ describe('SocioService', () => {
 
   it('create debería arrojar una excepción si el email no es válido', async () => {
     const newSocio: Partial<SocioEntity> = {
-      nombre: faker.name.firstName(),
+      nombre: faker.person.firstName(),
       email: "invalid-email",
       fechaNacimiento: faker.date.between({
         from: new Date('1950-01-01'),
@@ -101,7 +101,7 @@ describe('SocioService', () => {
   it('update debería actualizar un socio', async () => {
     const storedSocio: SocioEntity = socios[0];
     const updatedSocio: Partial<SocioEntity> = {
-      nombre: faker.name.firstName(),
+      nombre: faker.person.firstName(),
       email: faker.internet.email(),
       fechaNacimiento: faker.date.between({
         from: new Date('1950-01-01'),
@@ -120,7 +120,7 @@ describe('SocioService', () => {
   it('update debería arrojar una excepción si el email no es válido', async () => {
     const storedSocio: SocioEntity = socios[0];
     const updatedSocio: Partial<SocioEntity> = {
-      nombre: faker.name.firstName(),
+      nombre: faker.person.firstName(),
       email: "invalid-email",
       fechaNacimiento: faker.date.between({
         from: new Date('1950-01-01'),
@@ -149,7 +149,7 @@ describe('SocioService', () => {
 
   it('update debería arrojar una excepción si el socio no existe', async () => {
     const updatedSocio: Partial<SocioEntity> = {
-      nombre: faker.name.firstName(),
+      nombre: faker.person.firstName(),
       email: faker.internet.email(),
       fechaNacimiento: faker.date.between({
         from: new Date('1950-01-01'),
