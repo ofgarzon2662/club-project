@@ -6,7 +6,10 @@ module.exports = {
   coverageReporters: ['text', 'lcov', 'cobertura'],
   reporters: [
     'default',
-    ['jest-junit', { outputDirectory: 'coverage', outputName: 'coverage.xml' }],
+    [
+      'jest-junit',
+      { outputDirectory: 'coverage', outputName: 'cobertura-coverage.xml' },
+    ],
   ],
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
