@@ -4,15 +4,10 @@ module.exports = {
   collectCoverage: true,
   coverageDirectory: 'coverage',
   coverageReporters: ['text', 'lcov', 'cobertura'],
-  reporters: [
-    'default',
-    [
-      'jest-junit',
-      { outputDirectory: 'coverage', outputName: 'cobertura-coverage.xml' },
-    ],
-  ],
+  reporters: ['default'],
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'js', 'json', 'node'],
+  testResultsProcessor: 'jest-sonar-reporter',
 };

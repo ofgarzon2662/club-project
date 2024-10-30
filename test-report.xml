@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="/Users/fernando/Projects/GithubProjects/MISO/CursosTomados/APIs/parcial/club-project/src/app.controller.spec.ts">
+    <testCase name="AppController root should return &quot;Hello World!&quot;" duration="13"/>
+  </file>
+  <file path="/Users/fernando/Projects/GithubProjects/MISO/CursosTomados/APIs/parcial/club-project/src/socio/socio.service.spec.ts">
+    <testCase name="SocioService should be defined" duration="83"/>
+    <testCase name="SocioService findAll debería devolver todos los socios" duration="207"/>
+    <testCase name="SocioService findOne debería devolver un socio por id" duration="67"/>
+    <testCase name="SocioService create debería crear un socio" duration="8"/>
+    <testCase name="SocioService create debería arrojar una excepción si el email no es válido" duration="9"/>
+    <testCase name="SocioService update debería actualizar un socio" duration="10"/>
+    <testCase name="SocioService update debería arrojar una excepción si el email no es válido" duration="9"/>
+    <testCase name="SocioService delete debería eliminar un socio" duration="18"/>
+    <testCase name="SocioService delete debería arrojar una excepción si el socio no existe" duration="12"/>
+    <testCase name="SocioService update debería arrojar una excepción si el socio no existe" duration="32"/>
+  </file>
+  <file path="/Users/fernando/Projects/GithubProjects/MISO/CursosTomados/APIs/parcial/club-project/src/club/club.service.spec.ts">
+    <testCase name="ClubService should be defined" duration="98"/>
+    <testCase name="ClubService findAll should return all clubs" duration="254"/>
+    <testCase name="ClubService findOne should return a Club by id" duration="12"/>
+    <testCase name="ClubService findOne should throw an exception for an invalid Club" duration="17"/>
+    <testCase name="ClubService create should return a new Club" duration="20"/>
+    <testCase name="ClubService modify should return a modified Club" duration="11"/>
+    <testCase name="ClubService delete should remove a Club" duration="12"/>
+    <testCase name="ClubService create should throw an exception for a Club with a description longer than 100 characters" duration="29"/>
+    <testCase name="ClubService modify should throw an exception for a Club with a description longer than 100 characters" duration="13"/>
+  </file>
+  <file path="/Users/fernando/Projects/GithubProjects/MISO/CursosTomados/APIs/parcial/club-project/src/club-socio/club-socio.service.spec.ts">
+    <testCase name="ClubSocioService should be defined" duration="128"/>
+    <testCase name="ClubSocioService addSocio debería asociar un socio a un club" duration="215"/>
+    <testCase name="ClubSocioService addSocio debería arrojar una excepción con un socio que no existe" duration="14"/>
+    <testCase name="ClubSocioService addSocio debería arrojar una excepción con un socio que no existe" duration="9"/>
+    <testCase name="ClubSocioService findMemberFromClub debería encontrar un socio en un club" duration="18"/>
+    <testCase name="ClubSocioService findMemberFromClub debería arrojar una excepción con un club que no existe" duration="15"/>
+    <testCase name="ClubSocioService findMemberFromClub debería arrojar una excepción con un socio que no existe" duration="12"/>
+    <testCase name="ClubSocioService findMembersFromClub debería encontrar los miembros de un club" duration="13"/>
+    <testCase name="ClubSocioService findMembersFromClub debería arrojar una excepción con un club que no existe" duration="28"/>
+    <testCase name="ClubSocioService deleteMemberFromClub debería eliminar un socio de un club" duration="28"/>
+    <testCase name="ClubSocioService deleteMemberFromClub debería arrojar una excepción con un club que no existe" duration="17"/>
+    <testCase name="ClubSocioService updateMembersFromClub debería actualizar los miembros de un club" duration="12"/>
+  </file>
+</testExecutions>
